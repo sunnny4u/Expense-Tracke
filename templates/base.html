@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,11 +8,63 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/icon.png' %}">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Home-Expense Tracker</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <!-- Navigation Starts -->
+    <nav class="navbar navbar-dark navbar-expand-md">
+		<div class="container">
+            <img class="img-fluid mx-2" src="{% static 'img/logo.png' %}">
+			<a href="index.html" class="navbar-brand">Expense Tracker</a>
+			<button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbarNav">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div id="navbarNav" class="collapse navbar-collapse">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+    <!-- Home cover -->
+	<section id="pagecover" class="text-center text-light">
+		<div class="container">
+			<div class="row">
+				<div class="col mt-5">
+					<h2 class="text-light">Put a GPS on your money</h2>
+                    <div class="mt-5">
+                    <form>
+                        <input type="text" placeholder="Email" class="form-control" width="30%">
+                        <input type="text" placeholder="Password" class="form-control my-3" width="30%">
+                        <input type="submit" class="btn btn-warning" width="30%" value="Log In">
+                    </form>
+                    </div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+    <!-- Forms -->
+
+    <!-- Footer -->
+	<section id="homefooter" class="py-3 text-center text-light">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p class="lead">Copyright 2019 &copy; <a href="https://sadequlislam.000webhostapp.com/" class="text-warning" target="_blank">Md. Sadequl Islam</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

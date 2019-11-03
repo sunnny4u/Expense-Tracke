@@ -1,0 +1,39 @@
+.nav-item{
+	padding-left: 1em !important;
+}
+.nav-link{
+	text-transform: uppercase;
+}
+.navbar{
+	background: #000;
+}
+.navbar img{
+    height: 40px;
+    width: 40px;
+}
+
+#pagecover{
+	background: url('../img/cover2.jpg');
+	background-size: cover;
+	height: 600px;
+	background-attachment: fixed;
+    position: relative;
+    margin: 0 auto;
+
+}
+
+#pagecover .col{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.7); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    padding: 20px; /* Some padding */
+}
+
+
+
+#homefooter{
+	background: #000;
+}
