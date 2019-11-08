@@ -1,3 +1,6 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
 .nav-item{
 	padding-left: 1em !important;
 }
@@ -6,6 +9,7 @@
 }
 .navbar{
 	background: #000;
+    height: 70px;
 }
 .navbar img{
     height: 40px;
@@ -24,14 +28,24 @@
 
 #pagecover .col{
     position: absolute;
-    left: 0;
     top: 0;
+    width: 50%;
     background: rgb(0, 0, 0); /* Fallback color */
     background: rgba(0, 0, 0, 0.7); /* Black background with 0.5 opacity */
     color: #f1f1f1; /* Grey text */
     padding: 20px; /* Some padding */
+    text-align: center;
+    margin-left: 18%;
 }
 
+#pagecover input{
+    width: 60%;
+    margin-left: 20%;
+}
+
+#pagecover button{
+    width: 30%;
+}
 
 
 #homefooter{

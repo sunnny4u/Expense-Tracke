@@ -11,7 +11,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/icon.png' %}">
       <link rel="stylesheet" href="{% static 'css/style1.css' %}">
       <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
-    <title>Home-Expense Tracker</title>
+    <title>Contact-Expense Tracker</title>
   </head>
   <body>
     <!-- Navigation Starts -->
@@ -24,10 +24,10 @@
 			</button>
 			<div id="navbarNav" class="collapse navbar-collapse">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
+					<li class="nav-item">
 						<a class="nav-link" href="{% url 'home_page' %}">Home</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item active">
 						<a class="nav-link" href="{% url 'contact_page' %}">Contact</a>
 					</li>
 				</ul>
@@ -39,35 +39,18 @@
 	<section id="pagecover" class="text-center text-light">
 		<div class="container">
 			<div class="row">
-				<div id="logInForm" class="col mt-5 rounded">
-					<h2 class="text-light">Put a GPS <i class="fa fa-map-marker-alt"></i> on your money</h2>
-                    <div class="mt-5">
-                    <form class="form">
-                        <div class="text-center" id="logInForm">
-                            <input type="text" placeholder="Email" class="form-control">
-                            <input type="password" placeholder="Password" class=" form-control my-4">
-                            <button class="btn btn-warning"><strong>Log in</strong></button><br><br>
-                            <p class="lead">Not Registered? <a id="signUp" href="#">Sign up</a></p>
+                <div class="col rounded mt-5">
+                    <form class="form" action="https://formspree.io/mdsakhidar@gmail.com" method="POST">
+                        <h2 class="text-light">Please Fill up this form to contact us</h2>
+                        <div class="mt-5">
+                            <input type="text" name="name" class="form-control w-100 ml-0" placeholder="Full name">
+                            <input type="email" name="email" class="form-control mt-3 w-100 ml-0" placeholder="Email">
+                            <input type="text" name="contact" class="form-control mt-3 w-100 ml-0" placeholder="Phone number">
+                            <textarea class="form-control my-3" name="message" cols="30" rows="5" placeholder="Message"></textarea>
+                            <button type="submit" class="btn btn-warning"><strong>Submit</strong></button>
                         </div>
                     </form>
-                    </div>
-				</div>
-                <div id="signUpForm" class="col mt-5 rounded">
-					<h2 class="text-light">Put a GPS <i class="fa fa-map-marker-alt"></i> on your money</h2>
-                    <div class="mt-5">
-                    <form class="form">
-                        <div class="text-center" id="logInForm">
-                            <input type="text" placeholder="Name" class="form-control">
-                            <input type="text" placeholder="Email" class="form-control my-3">
-                            <input type="password" placeholder="Password" class="form-control my-3">
-                            <input type="password" placeholder="Confirm Password" class=" form-control my-3">
-                            <button class="btn btn-warning"><strong>Sign up</strong></button><br><br>
-                            <p class="lead">Already Registered? <a id="logIn" href="#">Log in</a></p>
-                        </div>
-                    </form>
-                    </div>
-				</div>
-
+                </div>
 			</div>
 		</div>
 	</section>
@@ -93,19 +76,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <script>
-        $(document).ready(function () {
-            $('#logInForm').show();
-            $('#signUpForm').hide();
-           $('#logIn').on('click', function () {
-              $('#signUpForm').hide();
-              $('#logInForm').show();
-           });
-           $('#signUp').on('click', function () {
-              $('#signUpForm').show();
-              $('#logInForm').hide();
-           });
-        });
-    </script>
   </body>
 </html>
