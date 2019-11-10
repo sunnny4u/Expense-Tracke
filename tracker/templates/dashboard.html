@@ -24,38 +24,21 @@
 			</button>
 			<div id="navbarNav" class="collapse navbar-collapse">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="{% url 'home_page' %}">Home</a>
-					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="{% url 'contact_page' %}">Contact</a>
+						<a class="nav-link" href="{% url 'dashboard_page' %}"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+					</li>
+                    <li class="nav-item">
+						<a class="nav-link" href="#"><i class="fas fa-user"></i> Profile</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'home_page' %}"><i class="fas fa-power-off"></i> Log Out</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
-    <!-- Home cover -->
-	<section id="pagecover" class="text-center text-light">
-		<div class="container">
-			<div class="row">
-                <div class="col rounded mt-5">
-                    <form class="form" action="https://formspree.io/mdsakhidar@gmail.com" method="POST">
-                        <h2 class="text-light">Please Fill up this form to contact us</h2>
-                        <div class="mt-5">
-                            <input type="text" name="name" class="form-control w-100 ml-0" placeholder="Full name">
-                            <input type="email" name="email" class="form-control mt-3 w-100 ml-0" placeholder="Email">
-                            <input type="text" name="contact" class="form-control mt-3 w-100 ml-0" placeholder="Phone number">
-                            <textarea class="form-control my-3" name="message" cols="30" rows="5" placeholder="Message"></textarea>
-                            <button type="submit" class="btn btn-warning"><strong>Submit</strong></button>
-                        </div>
-                    </form>
-                </div>
-			</div>
-		</div>
-	</section>
-
-    <!-- Forms -->
+    <div id="chartContainer" style="height: 900px; width: 100%;"></div>
 
 
 
@@ -71,10 +54,13 @@
 	</section>
 
     <!-- Optional JavaScript -->
+    <script type="text/javascript" src="{% static 'js/chart.js' %}"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/12f2fd04ae.js" crossorigin="anonymous"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
   </body>
 </html>

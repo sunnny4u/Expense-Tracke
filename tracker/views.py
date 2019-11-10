@@ -6,3 +6,6 @@ def home_page(request):
 
 def contact_page(request):
     return render(request, 'contact.html')
+
+def dashboard_page(request):
+    return render(request, 'dashboard.html')
